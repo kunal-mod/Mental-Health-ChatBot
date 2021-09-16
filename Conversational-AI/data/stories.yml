@@ -1,0 +1,93 @@
+version: "2.0"
+
+stories:
+
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about_bot
+  - action: utter_name
+  - action: utter_what_your_name
+  - intent: user_name
+    entities:
+    - name: "kunal"
+  - slot_was_set:
+      - name: "kunal"
+  - action: utter_mood
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about_bot
+  - action: utter_name
+  - action: utter_what_your_name
+  - intent: user_name
+    entities:
+    - name: "kunal"
+  - slot_was_set:
+      - name: "kunal"
+  - action: utter_mood
+  - intent: mood_sad
+  - action: utter_why_sad
+
+- story: covid positive
+  steps:
+  - intent: user_sick
+  - action: utter_user_sick_response
+  - intent: user_covid_positive
+  - action: utter_user_positive_response
+  - action: utter_precautions
+  - intent: tell_preccautions
+  - action: action_precautions
+
+
+# - story: your name
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: about_bot
+#   - action: utter_name
+#   - action: utter_what_your_name
+#   - intent: user_name
+#     entities:
+#     - name: "kunal"
+#   - slot_was_set:
+#       - name: "kunal"
+#   - action: utter_thanks
+
+- story: play video
+  steps:
+  - intent: play_video
+  - action: action_video
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye

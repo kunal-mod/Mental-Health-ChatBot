@@ -1,0 +1,168 @@
+version: "2.0"
+
+nlu:
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: about_bot
+  examples: |
+    - Who are you? And what do you do?
+    - What are your features?
+    - What are you?
+    - tell me about yourself
+    - What is your name?
+    - What should I call you?
+    - What is your good name?
+    - tell me your name?
+
+- intent: user_name
+  examples: |
+    - my name is [kunal]{"entity":"name","value":"kunal"}
+    - my name is [Kushal Gera]{"entity":"name","value":"Kushal Gera"}
+    - my name is [Hritik]{"entity":"name","value":"Hritik"}
+    - I am [kunal]{"entity":"name","value":"kunal"}
+    - I am [Kushal Gera]{"entity":"name","value":"Kushal Gera"}
+    - I am [Hritik]{"entity":"name","value":"Hritik"}
+    - [Abhay]{"entity":"name","value":"Abhay"}
+    - my name is [Khushi Jain]{"entity":"name","value":"Khushi Jain"}
+    - my name is [Aishwary Goswami]{"entity":"name","value":"Aishwary Goswami"}
+    - my name is [ritik jain]{"entity":"name","value":"ritik jain"}
+    - I am [khushi jain]{"entity":"name","value":"khushi jain"}
+    - I am [aishwary goswami]{"entity":"name","value":"aishwary goswami"}
+    - I am [Ritik Jain]{"entity":"name","value":"Ritik Jain"}
+    - [Shashank Kaushik]{"entity":"name","value":"Shashank Kaushik"}
+    - hi i am [kunal mod]{"entity":"name","value":"kunal mod"}
+    - hi i am [Rahul Singh]{"entity":"name","value":"Rahul Singh"}
+    - hi i am [Deepika]{"entity":"name","value":"Deepika"}
+    - hi my name is [Arpan Goyal]{"entity":"name","value":"Arpan Goyal"}
+    - hi my name is [Sharuk Khan]{"entity":"name","value":"Sharuk Khan"}
+    - hi my name is [Johnny Sins]{"entity":"name","value":"Johnny Sins"}
+
+- intent: user_sick
+  examples: |
+    - i am sick.
+    - i have health issue.
+    - i am not feeling well.
+    - i think i am sick.
+    - i am ill.
+    - i think i am ill.
+
+- intent: user_covid_positive
+  examples: |
+    - Yes, i am covid positive.
+    - Yes. The result came out positive
+    - Yes, I have corona virus
+    - Yes, I have coivd
+    - Yes. I am positive
+
+- intent: tell_preccautions
+  examples: |
+    - Please tell me about the precautions
+    - Yes, please do tell.
+    - Yes tell me about the precautions
+    - yes tell me the precautions
+
+- intent: play_video
+  examples: |
+    - play the video
+    - open the url
+    - open the link in the browser
+    - play the video that i asked for
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yes please
+    - why not
+    - ok
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - no leave it
+    - definitely no
+    - forget about it
+
+- intent: mood_great
+  examples: |
+    - i am good
+    - i am doing good
+    - i am doing great
+    - i am happy
+    - i am cheerfull today
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - i am feeling awesome
+    - i am feeling great
+    - i am wounderful, thaks for asking
+
+- intent: mood_sad
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

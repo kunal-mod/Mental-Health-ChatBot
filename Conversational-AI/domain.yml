@@ -1,0 +1,88 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_sad
+  - bot_challenge
+  - about_bot
+  - play_video
+  - user_sick
+  - user_covid_positive
+  - tell_preccautions
+  - user_name:
+      use_entities:
+        - name
+
+entities:
+  - name
+
+slots:
+  name:
+    type: text
+
+actions:
+  - action_video
+  - action_precautions
+
+responses:
+  utter_greet:
+  - text: "Hey! Nice to meet you?"
+  - text: "Hi, there."
+  - text: "Hello."
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_name:
+  - text: "I am a conversational AI. I am always here for you.\n     Whenever your are bored or lonely or just want someone to talk to,\n     I am at your service."
+
+  utter_what_your_name:
+  - text: "What is your name?"
+  - text: "What should I call you?"
+  - text: "What is your name?"
+  - text: "what is your good name?"
+
+  utter_mood:
+  - text: "So, {name}. How are you doing today?"
+  - text: "So, {name}. How are you ?"
+  - text: "So, {name}. How are you feeling today?"
+  - text: "So, {name}. How do you do?"
+
+  utter_thanks:
+  - text: "Thanks for your input.\nHave a nice day{name}"
+
+  utter_why_sad:
+  - text: "Why, what's wrong {name}"
+  - text: "Why are you sad {name}"
+  - text: "And what is the reason for that?"
+
+  utter_user_sick_response:
+  - text: "Oh, I am sorry to hear that. Have you been tested for covid?"
+  - text: "Sorry to head that. Have you taken the test for covid?"
+
+  utter_user_positive_response:
+    - text: "Ok {name} the main thing to keep in mind here is not to panic.\n     Your attitude and mindset are all that matters here.\n     Remember the lab results can't tell the severity of covid.\n     Contact a doctor immediately if you face problem breathing.\n     Take all the necessary precautions.\n     Stay away from people and do not make contact.\n     Wear a mask at all time.\n     Use Sanitizer\n     With Correct precautions we can fight this illness and come out winning.\n     Whenever you need someone to talk to I am hear for you."
+
+  utter_precautions:
+    - text: "Would you like to know about the precautions and measure that you should take?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
